@@ -1,7 +1,7 @@
-# Core requirements
+Core requirements
 cryptography>=38.0.0
 PyQt5>=5.15.0
 
-# Development extras
+Development extras
 pyinstaller>=5.0.0
 pytest>=7.0.0
