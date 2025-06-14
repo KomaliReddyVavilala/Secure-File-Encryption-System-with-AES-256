@@ -1,0 +1,1 @@
+This is a secret message!  Only authorized users should read this.  Encryption test successful if you can see this after decrypting.  
