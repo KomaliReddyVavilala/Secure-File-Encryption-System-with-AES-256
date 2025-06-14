@@ -1,8 +1,8 @@
-Secure File Encryptor
+## Secure File Encryptor
 AES-256 file encryption tool
 
 ## Usage
-In working directory follow the commands
+'''bash
 # Encrypt:
 python cli_app.py encrypt file.txt
 
