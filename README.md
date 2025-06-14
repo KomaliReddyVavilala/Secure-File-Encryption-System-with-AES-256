@@ -2,7 +2,7 @@
 AES-256 file encryption tool
 
 ## Usage
-'''bash
+```bash
 # Encrypt:
 python cli_app.py encrypt file.txt
 
