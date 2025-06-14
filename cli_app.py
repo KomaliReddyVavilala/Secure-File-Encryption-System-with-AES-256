@@ -1,8 +1,8 @@
 import argparse
 from aes_file_crypto import AESFileCrypto
 import getpass
-import os  # NEW IMPORT
-import sys  # NEW IMPORT
+import os 
+import sys 
 
 def main():
     parser = argparse.ArgumentParser(description="AES-256 File Encryption/Decryption Tool")
@@ -10,14 +10,13 @@ def main():
     parser.add_argument('input_file', help="Input file path")
     parser.add_argument('-o', '--output', help="Output file path (optional)")
     args = parser.parse_args()
-    
-    # Convert to absolute path and check existence
-    input_path = os.path.abspath(args.input_file)  # NEW: Handle relative paths
-    if not os.path.exists(input_path):  # NEW: Check file exists
+
+    input_path = os.path.abspath(args.input_file) 
+    if not os.path.exists(input_path):  
         print(f"Error: Input file not found: {input_path}", file=sys.stderr)
-        return 1  # NEW: Return error code
+        return 1 
     
-    # Securely get password without echoing
+   
     password = getpass.getpass("Enter password: ")
     confirm_password = getpass.getpass("Confirm password: ")
     
@@ -27,7 +26,7 @@ def main():
     
     crypto = AESFileCrypto(password)
     
-    # Handle output path (NEW: improved path handling)
+   
     output_path = args.output
     if not output_path:
         if args.action == 'encrypt':
@@ -45,13 +44,13 @@ def main():
             success = crypto.decrypt_file(input_path, output_path)
         
         if not success:
-            return 1  # NEW: Return error code if operation failed
+            return 1 
             
-    except Exception as e:  # NEW: Catch and display any errors
+    except Exception as e:  
         print(f"Error: {str(e)}", file=sys.stderr)
         return 1
     
     return 0  # NEW: Success
 
 if __name__ == "__main__":
-    sys.exit(main())  # NEW: Proper exit code handling
+    sys.exit(main())  
