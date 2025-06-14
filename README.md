@@ -1,4 +1,4 @@
-# Secure File Encryptor
+##Secure File Encryptor
 AES-256 file encryption tool
 
 ## Usage
