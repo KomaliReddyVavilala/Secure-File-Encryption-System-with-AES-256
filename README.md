@@ -7,7 +7,6 @@ AES-256 File Encryption Tool
    ```bash  
    pip install cryptography pyqt5
 3.Open bash from your current folder now follow the commands to encrypt and decrypt the test.txt
-         ```bash
       
       # Encrypt:
       python cli_app.py encrypt file.txt
